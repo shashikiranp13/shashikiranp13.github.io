@@ -1,24 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://shashikiranp13.github.io/atom.xml" rel="self"/>
-  <link href="http://shashikiranp13.github.io/"/>
-  <updated>2017-06-07T22:40:22+05:30</updated>
-  <id>http://shashikiranp13.github.io/</id>
-  <author>
-    <name><![CDATA[Your Name]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Bypass DEP Using ROP - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
 
   
-  <entry>
-    <title type="html"><![CDATA[Bypass DEP Using ROP]]></title>
-    <link href="http://shashikiranp13.github.io/blog/2017/06/07/dep-bypass/"/>
-    <updated>2017-06-07T20:22:47+05:30</updated>
-    <id>http://shashikiranp13.github.io/blog/2017/06/07/dep-bypass</id>
-    <content type="html"><![CDATA[<p>ROP- Return Oriented Programming</p>
+  <meta name="description" content="ROP- Return Oriented Programming Using the existing instructions present in the memory and making them execute is the concept behind ROP. We need to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://shashikiranp13.github.io/blog/2017/06/07/dep-bypass/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="shashikiranp13.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Bypass DEP Using ROP</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2017-06-07T20:22:47+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>8:22 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>ROP- Return Oriented Programming</p>
 
 <p>Using the existing instructions present in the memory and making them execute is the concept behind ROP.</p>
 
@@ -107,7 +173,7 @@ Each instruction (series of instructions) in our ROP chain will be called a &ldq
 
 <p>The EIP offset is at 22.</p>
 
-<p><img src="http://shashikiranp13.github.io/images/DEP/1.png" alt="crash-debug" /></p>
+<p><img src="/images/DEP/1.png" alt="crash-debug" /></p>
 
 <h2>Why DEP is preventing exploitation?</h2>
 
@@ -115,15 +181,15 @@ Each instruction (series of instructions) in our ROP chain will be called a &ldq
 
 <p>Finding the JMP ESP address</p>
 
-<p><img src="http://shashikiranp13.github.io/images/DEP/2.png" alt="jmp-esp" /></p>
+<p><img src="/images/DEP/2.png" alt="jmp-esp" /></p>
 
 <p>Address of jmp esp is b7e06aa9</p>
 
-<p><img src="http://shashikiranp13.github.io/images/DEP/3.png" alt="jmp-esp-3" /></p>
+<p><img src="/images/DEP/3.png" alt="jmp-esp-3" /></p>
 
 <p>press  F7 twice and you will see that the application crashes when trying to execute the instruction from the stack.</p>
 
-<p><img src="http://shashikiranp13.github.io/images/DEP/4.png" alt="illegal-excep" /></p>
+<p><img src="/images/DEP/4.png" alt="illegal-excep" /></p>
 
 <h2>Using the ROP technique:</h2>
 
@@ -174,7 +240,7 @@ So we will modify the stack as
 Point EIP to system function call, when system is called its return address and parameters needs to be stored in the stack.
 See second stack layout in below figure.</p>
 
-<p><img src="http://shashikiranp13.github.io/images/DEP/5.png" alt="stack-layout" /></p>
+<p><img src="/images/DEP/5.png" alt="stack-layout" /></p>
 
 <p>so we will craft the payload as below.</p>
 
@@ -183,12 +249,12 @@ See second stack layout in below figure.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="http://shashikiranp13.github.io/images/DEP/6.png" alt="jmp-sys" /></p>
+<p><img src="/images/DEP/6.png" alt="jmp-sys" /></p>
 
 <p>If you see the stack layout we can notice that the return address(when system function call completes execution it will jump to this address) and parameter(address of /bin/sh) for the system call.
 Run the program and exit the debugger and we can receive the shell.</p>
 
-<p><img src="http://shashikiranp13.github.io/images/DEP/7.png" alt="shell" /></p>
+<p><img src="/images/DEP/7.png" alt="shell" /></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -227,7 +293,95 @@ We can set the return address to address of exit function and exit doesn’t nee
 </span><span class='line'>value is AAAAAAAAAAAAAAAAAAAAAAP____&__d___r
 </span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-</feed>
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2017-06-07T20:22:47+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>8:22 pm</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shashikiranp13.github.io/blog/2017/06/07/dep-bypass/" data-via="" data-counturl="http://shashikiranp13.github.io/blog/2017/06/07/dep-bypass/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/06/07/dep-bypass/">Bypass DEP Using ROP</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
