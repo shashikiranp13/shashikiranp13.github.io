@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://shashikiranp13.github.io/atom.xml" rel="self"/>
+  <link href="http://shashikiranp13.github.io/"/>
+  <updated>2017-06-07T22:03:41+05:30</updated>
+  <id>http://shashikiranp13.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New Post]]></title>
+    <link href="http://shashikiranp13.github.io/blog/2017/06/07/new-post/"/>
+    <updated>2017-06-07T20:22:47+05:30</updated>
+    <id>http://shashikiranp13.github.io/blog/2017/06/07/new-post</id>
+    <content type="html"><![CDATA[<p>In <a href="https://www.defcon.org/html/defcon-16/dc-16-speakers.html#Aharoni">DEFCON #16</a>, there was an interesting session on HP OpenView NNM  exploitation - <strong><em>&ldquo;from bug to 0 day&rdquo;</em></strong> presented by <em>muts</em>. While watching his walkthrough, I found that particular exploit development process was extremely intense and challenging. To better understand the concepts, I decided to take it as an exercise and reproduce the same in my local environment.</p>
+
+<!--more-->
+
+
+<h3>Environment &amp; tools</h3>
+
+<ul>
+<li>32 bit windows server 2003-R2-SP2 (disabled <code>DEP</code>, enabled <code>ASLR</code>)</li>
+<li>HP NNM release - B.07.53</li>
+<li>Immunity Debugger v1.85, mona.py v2.0</li>
+<li>python 2.7 x86, pydbg 32-bit binary, python wmi, pywin32</li>
+<li>spike fuzzer</li>
+</ul>
+
+
+<p>I installed HP NNM release - B.07.53 in a windows 2003-R2-SP2 platform. Then I tried to browse it&rsquo;s web interface <code>http://172.16.232.178:7510/topology/home</code> to verify everything was up and running fine.</p>
+
+<p><img src="http://shashikiranp13.github.io/downloads/code/2016/11/hpnnm-B.07.53/hpnnm-version.png" alt="hpnnm-version" /></p>
+]]></content>
+  </entry>
+  
+</feed>
